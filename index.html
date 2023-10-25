@@ -3,19 +3,36 @@
 <head>
     <title>My GitHub Page</title>
     <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            background-color: #2e3d49; /* Muted blue */
+            color: #dcdcdc;  /* Light gray */
+            padding: 14px 20px;
+            margin: 8px 0;
+        }
+
         /* Aligning images */
         img {
             display: block;
             margin-left: auto;
             margin-right: auto;
         }
-        /* Different widths for different figures */
+
         #fig1 {
-            width: 500px;
+            width: 600px;  /* Increased size */
         }
+
         #fig2 {
-            width: 700px;
+            width: 800px;  /* Increased size */
         }
+
         /* Styling figure legends */
         figcaption {
             text-align: center;
@@ -24,15 +41,30 @@
         figcaption b {
             font-weight: bold;
         }
+
         /* Styling project background section */
         #project-background {
-            background-color: #f9f9f9;
+            background-color: #f1f1f1;
             padding: 16px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
         }
+
         /* Add spacing between figures */
         figure {
             margin-bottom: 50px;
         }
+
+        /* Differentiate sequential projects */
+        .project {
+            background-color: #ffffff;
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
     </style>
 </head>
 <body>
@@ -41,26 +73,28 @@
     <p>I recently completed my PhD in Life Sciences (focusing on biostatistics) at Imperial College London.
         Here is a sample of some work.</p>
 
-    <h1>HOW DOES FEARS OF WAR AFFECT BEHAVIOUR? A STUDY USING GOOGLE TRENDS</h1>
-    <p>This project explores how people behave during wartime.</p>
+    <div class="project">
+        <h1>HOW DOES FEARS OF WAR AFFECT BEHAVIOUR? A STUDY USING GOOGLE TRENDS</h1>
+        <p>This project explores how people behave during wartime.</p>
 
-    <!-- Adding an image with a legend -->
-    <figure>
-        <img id="fig1" src="fig1.png" alt="Figure 1.">
-        <figcaption><b>Figure 1.</b> Monthly time series normalized...</figcaption>
-    </figure>
+        <!-- Adding an image with a legend -->
+        <figure>
+            <img id="fig1" src="fig1.png" alt="Figure 1.">
+            <figcaption><b>Figure 1.</b> Monthly time series normalised...</figcaption>
+        </figure>
 
-    <div id="project-background">
-        <h3>Background</h3>
-        <p>This is the background information for my new project.</p>
+        <div id="project-background">
+            <h3>Background</h3>
+            <p>This is the background information for my new project.</p>
+        </div>
+
+        <!-- Adding another image with a legend -->
+        <figure>
+            <img id="fig2" src="fig2.png" alt="Figure 2.">
+            <figcaption><b>Figure 2.</b> Mean monthly change in normalised time series, calculated using first differences
+            </figcaption>
+        </figure>
     </div>
-
-    <!-- Adding another image with a legend -->
-    <figure>
-        <img id="fig2" src="fig2.png" alt="Figure 2.">
-        <figcaption><b>Figure 2.</b> Mean monthly change in normalized time series, calculated using first differences
-        </figcaption>
-    </figure>
 
 </body>
 </html>
