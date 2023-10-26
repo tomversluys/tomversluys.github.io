@@ -19,23 +19,24 @@
         }
 
         /* Aligning images */
-        .figure-wrapper img {
-            width: calc(100% - 5px); /* 50% width minus a little gap */
+        #fig1, #fig2 {
+            width: 400px;  /* Explicit width */
+            height: auto;  /* Height will adjust automatically based on aspect ratio */
+            object-fit: contain;  /* Maintains aspect ratio */
             margin: 0 5px; /* Adding small margins to either side */
         }
 
         /* For a specific size for Figure 3 */
-    #fig3 {
-        width: 800px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+        #fig3 {
+            width: 800px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         /* Styling figure legends */
         figcaption {
-/*             text-align: center; */
-              text-align: left;  /* Aligned to left */
+            text-align: left;  /* Aligned to left */
             margin-top: 8px;
         }
 
@@ -56,14 +57,8 @@
         .figure-wrapper {
             display: flex;
             justify-content: center;
-            gap: 1px;  /* Reduced gap size */
+            gap: 10px;  /* Increased gap size to prevent overlap */
         }
-
-        #fig1, #fig2 {
-    width: 400px;  /* You can set your own dimensions */
-    height: 525px;
-    object-fit: cover;  /* Maintains aspect ratio */
-}
 
         /* Add spacing between figures */
         figure {
