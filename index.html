@@ -12,25 +12,21 @@
         }
 
         h1 {
-            background-color: #2e3d49; /* Muted blue */
-            color: #dcdcdc;  /* Light gray */
+            background-color: #2e3d49;
+            color: #dcdcdc;
             padding: 14px 20px;
             margin: 8px 0;
         }
 
         /* Aligning images */
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        .figure-wrapper img {
+            width: calc(50% - 10px); /* 50% width minus a little gap */
+            margin: 0 5px; /* Adding small margins to either side */
         }
 
-        #fig1, #fig2 {
-            width: 600px;  /* Increased size */
-        }
-
+           /* For a specific size for Figure 3 */
         #fig3 {
-            width: 800px;  /* Increased size */
+            width: 800px;
         }
 
         /* Styling figure legends */
@@ -38,6 +34,7 @@
             text-align: center;
             margin-top: 8px;
         }
+        
         figcaption b {
             font-weight: bold;
         }
@@ -55,7 +52,6 @@
         .figure-wrapper {
             display: flex;
             justify-content: center;
-            gap: 20px;
         }
 
         /* Add spacing between figures */
@@ -80,23 +76,19 @@
 
     <div class="project">
         <h1>HOW DOES FEAR OF WAR AFFECT BEHAVIOUR? A STUDY USING GOOGLE TRENDS</h1>
-
         <div class="info-background">
             <p>This project explores how people behave during wartime.</p>
-
             <p><strong>Data used:</strong></p>
             <ul>
                 <li>Google trends</li>
                 <li>NASDAQ and Yfinance APIs</li>
-            </ul>  
-
+            </ul>
             <p><strong>Tools used:</strong></p>
             <ul>
                 <li>Python</li>
                 <li>SQL</li>
                 <li>Google Cloud (Big Query)</li>
             </ul>
-
             <p><strong>Statistical methods used:</strong></p>
             <ul>
                 <li>Vector autoregression</li>
@@ -106,11 +98,11 @@
         <!-- Adding images side by side -->
         <div class="figure-wrapper">
             <figure>
-                <img id="fig1" src="fig1.png" alt="Figure 1.">
+                <img src="fig1.png" alt="Figure 1.">
                 <figcaption><b>Figure 1.</b> Monthly time series normalised...</figcaption>
             </figure>
             <figure>
-                <img id="fig2" src="fig2.png" alt="Figure 2.">
+                <img src="fig2.png" alt="Figure 2.">
                 <figcaption><b>Figure 2.</b> Some other data...</figcaption>
             </figure>
         </div>
@@ -118,13 +110,6 @@
         <div class="info-background">
             <p>This is the background information for my new project.</p>
         </div>
-
-        <!-- Adding another image with a legend -->
-        <figure>
-            <img id="fig3" src="fig3.png" alt="Figure 3.">
-            <figcaption><b>Figure 3.</b> Mean monthly change in normalised time series, calculated using first differences</figcaption>
-        </figure>
     </div>
-
 </body>
 </html>
